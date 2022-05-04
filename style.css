@@ -1,0 +1,143 @@
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+:root {
+  --background-main: #191718;
+  --color-text: #aaaaaa;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  background-color: var(--background-main);
+}
+
+.navbar-list {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  list-style: none;
+  border-bottom: 1px solid var(--color-text);
+  padding-top: 14px;
+  padding-left: 16px;
+  padding-bottom: 11px;
+}
+
+.navbar-item:hover {
+  background-color: #5C5C5C;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-item:hover a {
+  color: #fff;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.navbar-item-main a {
+  color: #fff;
+}
+
+/* Content logo */
+.content {
+  width: calc(100% - 150px);
+  margin-left: 150px;
+}
+
+.content-wrapper {
+  max-width: 1510px;
+  /* padding: 0 129px; */
+  padding: 0 20px;
+}
+.content-logo {
+  width: 310px;
+  height: 122px;
+  margin: 0 auto;
+  padding: 20px 0 30px 0;
+}
+
+.content-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-head {
+  background: #efefef;
+  padding: 0 129px;
+}
+.content-head h2 {
+  text-align: center;
+  padding-top: 38px;
+}
+.content-head p {
+  text-align: center;
+  padding-bottom: 38px;
+}
+
+/* list group */
+
+.list-group {
+  display: flex;
+}
+.list-group__item-box {
+  display: flex;
+  margin-right: 50px;
+}
+.list-group__item-box img {
+  width: 128px;
+  height: 128px;
+  margin-right: 16px;
+  margin-bottom: 6px;
+}
+
+.list-group__item-box p {
+  margin: 0;
+}
+
+.footer {
+  padding: 0 20px;
+  border-top: 2px solid var(--color-text);
+  margin-top: 50px;
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .list-group {
+    /* display: none; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* CSS */
+}
+
+/* phone */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+  .list-group {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .list-group__item {
+    padding-top: 20px;
+  }
+
+  .content-head {
+    padding: 0 20px;
+  }
+}
