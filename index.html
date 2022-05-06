@@ -111,5 +111,21 @@
         <p>Copyright © 2021</p>
       </footer>
     </div>
+
+    <script>
+      var groupByLength = (array, key) => {
+        return array.reduce((item, cur, index) => {
+          console.log('index ', item[cur[key]]);
+          (item[cur[key]] = item[cur[key]] || []).push(cur);
+
+          console.log('length item: ',cur[key], item[cur[key]]);
+          console.log('------------------------');
+          return item;
+        }, {});
+      };
+
+
+      console.log(groupByLength(["one", "three","night","two", "ni"], "length"));
+    </script>
   </body>
 </html>

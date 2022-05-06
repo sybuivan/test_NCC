@@ -5,6 +5,7 @@ html {
   margin: 0;
   overflow-x: hidden;
   width: 100%;
+  max-width: calc(1768px + 150px);
 }
 :root {
   --background-main: #191718;
@@ -125,8 +126,16 @@ html {
   border-top: 2px solid var(--color-text);
   margin-top: 50px;
 }
+
 /* tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .content-wrapper {
+    padding: 0 20px;
+  }
+  .content-head {
+    padding: 0 20px;
+  }
+
   .list-group {
     /* display: none; */
     display: grid;
@@ -138,6 +147,11 @@ html {
 /* phone */
 @media (min-width: 481px) and (max-width: 767px) {
   /* CSS */
+
+  .content-wrapper {
+    padding: 0 20px;
+  }
+
   .list-group {
     display: grid;
     grid-template-columns: 1fr;
@@ -149,5 +163,28 @@ html {
 
   .content-head {
     padding: 0 20px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 480px) { 
+  .navbar { 
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .content-head {
+    padding: 20px;
+  }
+
+  .content-wrapper {
+    padding: 0;
+  }
+  .list-group {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
